@@ -48,11 +48,13 @@ module AlphabeticalPaginate
 
       if params[:pagination_class] != "none"
         pagination = '<div class="pagination %s" id="alpha" style="height:35px;">' % params[:pagination_class]
+        ul = '<ul class="pagination %s" id="alpha" style="height:35px;">' % params[:pagination_class]
       else
         pagination = '<div class="pagination" id="alpha" style="height:35px;">'
+        ul = '<ul class="pagination" id="alpha" style="height:35px;">'
       end
       pagination +=
-        "<ul>" +
+        ul +
         links +
         "</ul>" +
         "</div>"
